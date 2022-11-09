@@ -35,6 +35,7 @@ async function SOMAFMchannels_Scraper()
     let result = await fetchChannels();
    return result
   } catch( err ) {
+    return{error: err.message };
     console.error( err.message );
   }
 }
@@ -43,3 +44,5 @@ async function SOMAFMchannels_Scraper()
 SOMAFMchannels_Scraper().then(function(search_results) {
     console.log(search_results)
   });
+
+//
